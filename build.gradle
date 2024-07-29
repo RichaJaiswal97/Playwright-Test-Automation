@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.rj'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    // https://mvnrepository.com/artifact/com.microsoft.playwright/playwright
+    implementation group: 'com.microsoft.playwright', name: 'playwright', version: '1.45.1'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.18.1'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer
+    implementation group: 'io.cucumber', name: 'cucumber-picocontainer', version: '7.18.1'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java8
+    implementation group: 'io.cucumber', name: 'cucumber-java8', version: '7.18.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
