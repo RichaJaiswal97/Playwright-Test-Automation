@@ -1,5 +1,6 @@
 @ui
-  Feature: Login to Lambda test.com
-    Scenario: Login to Lambda test
+  Feature: Login to Swag Labs
+    Scenario: Login to Swag Labs
       Given User Launch URL
-      And User Logged in Lambda Test
+      And User Logged in Swag Labs
+      Then User Verify Page Tittle
