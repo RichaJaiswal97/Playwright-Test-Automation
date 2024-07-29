@@ -5,9 +5,14 @@ import java.io.FileNotFoundException;
 import java.util.Properties;
 
 public class ConfigReader {
-    Properties prop;
+    private static Properties prop;
 
-    public void configReader() throws FileNotFoundException {
+    public static ConfigReader getInstance() throws FileNotFoundException {
+        configReader();
+        return new ConfigReader();
+    }
+
+    public static void configReader() throws FileNotFoundException {
         try {
             FileInputStream file = new FileInputStream("./src/main/resources/cofig.properties");
             prop = new Properties();
